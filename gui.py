@@ -1,6 +1,14 @@
+#  pyinstaller --onefile --windowed --clean gui.py
+# The above code was used to create a .exe file
+
 import functions
 import FreeSimpleGUI as sg
 import time
+import os
+
+if not os.path.exists('todos.txt'):
+    with open('todos.txt', 'w') as file:
+        pass
 
 sg.theme('Black')
 
